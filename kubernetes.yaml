@@ -26,6 +26,7 @@ spec:
     spec:
       containers:
       - name: fbgo
-        image: vincekirkov/fbgo:latest
+        image: vincekirkov/fbgo_kubernetes:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
