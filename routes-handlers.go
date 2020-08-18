@@ -115,7 +115,7 @@ func SignInUser(facebookUserDetails FacebookUserDetails) (string, error) {
 func GetUserDetails(response http.ResponseWriter, request *http.Request) {
 	var result UserDetails
 	var errorResponse = ErrorResponse{
-		Code: http.StatusInternalServerError, Message: "It's not you it's me.",
+		Code: http.StatusInternalServerError, Message: "Cannot find this account in the DB",
 	}
 	bearerToken := request.Header.Get("Authorization")
 	var authorizationToken = strings.Split(bearerToken, " ")[1]
